@@ -4,10 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Day 2</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            overflow: hidden;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        div {
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        div:nth-child(1) {
+            border: 5px dashed red;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+        }
+
+        div:nth-child(2) {
+            border: 5px groove red;
+        }
+
+        .hide_box {
+            display: none;
+        }
+    </style>
 </head>
 
+<!-- Body Tag -->
+
 <body>
+    <section>
+        <div>
+            <p>
+                <i>Hello World</i>
+            </p>
+            <p>
+                <em>Hello World</em>
+            </p>
+            <p>
+                <bold>Hello World</bold>
+            </p>
+            <p>
+                <strong>Hello Wrong</strong>
+            </p>
+        </div>
+        <div>
+            <p>H <sub>2</sub> O</p>
+            <p>a <sup>2</sup> b</p>
+            <p><ins>Hello World</ins></p>
+            <p><mark>Hello</mark>World</p>
+            <p><del>299</del>199</p>
+
+        </div>
+        <div class="hide_box"></div>
+    </section>
 
 </body>
 
