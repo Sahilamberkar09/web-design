@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+
+
+        .sect1 {
+            background: linear-gradient(45deg, red, blue);
+            text-align: left;
+            padding: 1rem;
+            width: 30%;
+            height: 30vh;
+            margin-bottom: 1rem;
+        }
+
+        div {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .sect3 div {
+            justify-content: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: white;
+            font-size: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: end;
+        }
+
+        #sect2 {
+            text-align: center;
+            background-color: red;
+            padding: 1rem;
+            width: 70%;
+            margin-bottom: 1rem;
+        }
+
+        .sect3 {
+            width: 40%;
+        }
+
+        #sect2 h4 {
+            margin: 1rem;
+        }
+
+        .sect3 div p {
+            margin: 1rem;
+            padding: 1rem;
+            background-color: aqua;
+            text-align: right;
+        }
+
+
+
+        .main__parent section:not(:first-child) {
+            opacity: .3;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main__parent">
+        <section class="sect1">
+            <div>
+                <h1>Hello</h1>
+                <h2>Hello</h2>
+                <h3>Hello</h3>
+            </div>
+        </section>
+        <section id="sect2">
+            <div>
+                <h4>Hello</h4>
+                <h5>Hello</h5>
+                <h6>Hello</h6>
+            </div>
+        </section>
+        <section class="sect3">
+            <div>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nemo laborum deserunt nulla quo,
+                    sint placeat ipsam dolore fugit dolorum!</p>
+            </div>
+        </section>
+    </section>
+
+
+</body>
+
+</html>
