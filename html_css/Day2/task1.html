@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Ticket</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .ticket {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #005960;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .ticket-header h1 {
+            font-size: 14px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .ticket-content {
+
+            padding: 10px;
+            background-color: rgb(222 244 251);
+        }
+
+        .ticket-row {
+            display: inline-block;
+            width: 24%;
+            margin-bottom: 10px;
+        }
+
+        .ticket-row:first-child {
+            width: 18%;
+        }
+
+        .ticket-row:nth-child(2) {
+            width: 26%;
+        }
+
+        .ticket-row p {
+            font-size: 20px;
+            margin: 2px 0;
+            padding: 2px 0;
+        }
+
+        .space {
+            padding: 10px 0 10px 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ticket">
+        <!-- Header -->
+        <div class="ticket-header">
+            <h1>Flight: Cape Town to Istanbul (TK41)</h1>
+            <h1>Thursday, June 30</h1>
+        </div>
+
+        <!-- Content -->
+        <div class="ticket-content">
+
+            <div class="ticket-row">
+                <p>Date: </p>
+                <p>Airline: </p>
+                <p>Flight: </p>
+                <p>From:</p>
+                <p>To:</p>
+                <p>Class:</p>
+                <p>Status: </p>
+                <p>Stops:</p>
+                <p>In flight service:</p>
+            </div>
+
+            <div class="ticket-row">
+                <p>June 30, 2016 (Thu)</p>
+                <p>Turkish Airlines Inc</p>
+                <p>TK41 (Operated by Turkish Airlines Inc)</p>
+                <p>Cape Town, South Africa</p>
+                <p>Istanbul, Turkey</p>
+                <p>ECONOMY (H)</p>
+                <p>1</p>
+                <p>Confirmed</p>
+                <p>Meal, Non-smoking. Meal, Non-smoking</p>
+            </div>
+
+            <div class="ticket-row">
+                <p>Departs:</p>
+                <p>Arrives:</p>
+                <p class="space"></p>
+                <p>Airport:</p>
+                <p>Airport:</p>
+                <p>Baggage:</p>
+                <p>Stops At:</p>
+                <p>Aircraft:</p>
+                <p class="space"></p>
+                <p>Vendor Locator:</p>
+            </div>
+
+            <div class="ticket-row">
+                <p>15:25 hrs</p>
+                <p>05:20 hrs (July 01)</p>
+                <p class="space"></p>
+                <p>CPT - Cape Town International</p>
+                <p>IST - Ataturk Arpt, Terminal 1</p>
+                <p>ADULT 30K</p>
+                <p>Johannesburg</p>
+                <p>Airbus Industries A330</p>
+                <p class="space"></p>
+                <p>UTMXCX</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
