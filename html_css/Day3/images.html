@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 - Images</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        section {
+            background: linear-gradient(90deg, #00000051, #ffffff5b), url(https://plus.unsplash.com/premium_photo-1675798561940-8cf9cbffc175?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGV4dHVyZXxlbnwwfHwwfHx8MA%3D%3D);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .first-row,
+        .second-row {
+            display: flex;
+        }
+
+        .pizza-img,
+        .pizza-img-2,
+        .pizza-img-3 {
+            width: 200px;
+            height: 200px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-attachment: scroll;
+        }
+
+        .pizza-img {
+            background-image: url(https://png.pngtree.com/png-clipart/20230928/original/pngtree-pepperoni-pizza-isolated-with-clipping-path-png-image_13007895.png);
+        }
+
+        .pizza-img-2 {
+            background-image: url(https://png.pngtree.com/png-vector/20240127/ourmid/pngtree-onion-pizza-png-images-ai-generative-png-image_11553551.png);
+        }
+
+        .pizza-img-3 {
+            background-image: url(https://png.pngtree.com/png-vector/20231018/ourmid/pngtree-pizza-png-with-ai-generated-png-image_10205671.png);
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .menu h2 {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 2rem;
+            color: yellow;
+            text-align: center;
+        }
+
+        .menu-price {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .menu .desc {
+            text-align: center;
+            width: 55%;
+            color: white;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            gap: 5px;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            font-weight: 500;
+        }
+
+        .left p {
+            text-align: end;
+        }
+
+        .right {
+            font-size: 2rem;
+        }
+
+        .right sup {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="first-row">
+                <div class="menu">
+                    <div class="pizza-img"></div>
+                    <h2>Pepperoni</h2>
+                    <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quos!</p>
+                    <div class="menu-price">
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Reg</span>
+                            </div>
+                            <div class="right">
+                                <p>16 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Large</span>
+                            </div>
+                            <div class="right">
+                                <p>23 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu">
+                    <div class="pizza-img-2"></div>
+                    <h2>Onion</h2>
+                    <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quos!</p>
+                    <div class="menu-price">
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Reg</span>
+                            </div>
+                            <div class="right">
+                                <p>16 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Large</span>
+                            </div>
+                            <div class="right">
+                                <p>23 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="pizza-img-3"></div>
+                    <h2>Mushroom</h2>
+                    <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quos!</p>
+                    <div class="menu-price">
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Reg</span>
+                            </div>
+                            <div class="right">
+                                <p>16 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Large</span>
+                            </div>
+                            <div class="right">
+                                <p>23 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="second-row">
+                <div class="menu">
+                    <div class="pizza-img"></div>
+                    <h2>Pepperoni</h2>
+                    <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quos!</p>
+                    <div class="menu-price">
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Reg</span>
+                            </div>
+                            <div class="right">
+                                <p>16 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Large</span>
+                            </div>
+                            <div class="right">
+                                <p>23 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu">
+                    <div class="pizza-img-2"></div>
+                    <h2>Pepperoni</h2>
+                    <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quos!</p>
+                    <div class="menu-price">
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Reg</span>
+                            </div>
+                            <div class="right">
+                                <p>16 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Large</span>
+                            </div>
+                            <div class="right">
+                                <p>23 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="pizza-img"></div>
+                    <h2>Pepperoni</h2>
+                    <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quos!</p>
+                    <div class="menu-price">
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Reg</span>
+                            </div>
+                            <div class="right">
+                                <p>16 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="left">
+                                <p>$</p>
+                                <span>Large</span>
+                            </div>
+                            <div class="right">
+                                <p>23 <sup>00</sup> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
