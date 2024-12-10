@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -44,22 +45,48 @@ li a {
   font-weight: 600;
   text-decoration: none;
   color: var(--text-color);
+  position: relative;
+}
+
+nav li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--primary);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav header ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: var(--primary);
 }
 
 ul li img {
-  width: 130px;
+  width: 100px;
 }
 
-img {
+li img {
   width: 100%;
   border-radius: 0 0 25px 25px;
 }
+
+/* ======================================================================= */
 
 .main_view {
   width: 100%;
   background-image: url("../imgs/image1.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  padding: 2rem;
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 50%);
 }
 
 .welcome__text {
@@ -88,7 +115,16 @@ img {
   border-radius: 25px;
   line-height: 1rem;
   margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.welcome__text p:hover {
   box-shadow: 0 4px 0 0 var(--secondary);
+}
+/* ================================================= */
+
+section:not(:first-child) {
+  margin: 1rem 0;
 }
 
 /* ================================================= */
@@ -99,11 +135,15 @@ img {
 }
 
 .section__title {
+  width: max-content;
+  margin: 0 auto;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 5px solid var(--primary);
 }
 
 .about__container img {
@@ -144,4 +184,33 @@ img {
   background-color: var(--secondary);
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+span {
+  font-weight: 700;
+}
+
+/* ========================================================= */
+
+.map__container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map__container p {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer {
+  padding: 1rem;
+  border-top: 2px solid rgba(0, 0, 0, 10%);
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: var(--secondary);
 }

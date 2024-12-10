@@ -12,10 +12,10 @@
     <nav>
         <header>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><img src="imgs/Explore_India.png" alt="Explore India Logo"></li>
-                <li><a href="#">Explore</a></li>
+                <li><a href="#explore">Explore</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
@@ -30,8 +30,8 @@
             </div>
         </section>
 
-        <section class="about">
-            <div class="container about__container">
+        <section class="about" id="about">
+            <div class="about__container">
                 <h2 class="section__title">About India</h2>
                 <div class="about__main__container">
                     <div>
@@ -40,8 +40,10 @@
                     </div>
                     <div>
                         <div class="info__side">
-                            <p>India, country that occupies the greater part of South Asia. It is made up of 28 states
-                                and eight union territories, and its national capital is New Delhi, built in the 20th
+                            <p>India, country that occupies the greater part of South Asia. It is made up of <span> 28
+                                    states
+                                    and 8 union territories,</span> and its national capital is New Delhi, built in
+                                the 20th
                                 century just south of the historic hub of Old Delhi to serve as India’s administrative
                                 center. Its government is a constitutional republic that represents a highly diverse
                                 population consisting of thousands of ethnic groups and hundreds of languages. India
@@ -50,7 +52,6 @@
                             </p>
                             <div class="counter__container">
                                 <div class="counter__card__1">
-
                                     <h3>142.86 crores</h3>
                                     <p>Population( 2023 )</p>
                                 </div>
@@ -64,7 +65,80 @@
                 </div>
             </div>
         </section>
+
+        <section>
+            <div class="map__container" id="explore">
+                <h2 class="section__title">India Map</h2>
+                <p>Click any State To Gain its Information</p>
+                <img src="./imgs/map.png" usemap="#image-map">
+            </div>
+
+            <map name="image-map">
+                <area target="" alt="Jammu and Kashmir" title="Jammu and Kashmir" href="./states/J&K.html"
+                    coords="188,89,164,76,164,52,174,41,153,19,168,10,199,8,229,37,255,29,274,42,253,61,253,74,260,85,245,93,229,85,207,78"
+                    shape="poly">
+                <area target="" alt="Andhra Pradesh" title="Andhra Pradesh" href="./states/AP.html"
+                    coords="338,345,321,349,318,342,305,360,280,365,257,384,214,412,196,414,205,438,218,441,224,445,219,456,241,449,256,441,254,420,261,400,269,402,294,387"
+                    shape="poly">
+                <area target="" alt="Arunachal Pradesh" title="Arunachal Pradesh" href="./states/Arunachal.html"
+                    coords="469,195,457,186,500,149,509,153,521,145,533,162,548,170,539,184,525,186,508,202,503,219,482,218,495,201,529,177,514,172,490,184,484,192"
+                    shape="poly">
+                <area target="" alt="Assam" title="Assam" href="./states/Assam.html"
+                    coords="423,201,425,216,461,212,474,221,465,239,477,240,485,226,478,216,497,199,521,182,515,175,492,186,473,198"
+                    shape="poly">
+                <area target="" alt="Bihar" title="Bihar" href="./states/Bihar.html"
+                    coords="325,189,337,220,313,232,318,245,342,244,357,239,365,240,373,232,386,226,389,216,392,206,361,204"
+                    shape="poly">
+                <area target="" alt="Chhattisgarh" title="Chhattisgarh" href="./states/Chhattisgarh.html"
+                    coords="317,251,301,259,287,255,286,261,293,264,278,284,265,307,271,331,259,347,276,366,289,347,285,326,301,328,296,306,312,302,322,281,329,276"
+                    shape="poly">
+                <area target="" alt="Goa" title="Goa" href="./states/Goa.html" coords="140,399,149,402,149,408,144,413"
+                    shape="poly">
+                <area target="" alt="Gujarat" title="Gujarat" href="./states/Gujarat.html"
+                    coords="114,231,145,238,165,270,153,288,146,307,134,318,132,276,121,294,96,301,68,274,93,273,97,261,75,262,53,244,70,236,101,239"
+                    shape="poly">
+                <area target="" alt="Haryana" title="Haryana" href="./states/Haryana.html"
+                    coords="173,134,197,143,213,122,222,135,213,161,221,177,212,183,205,173,193,175,188,159,184,149,174,147"
+                    shape="poly">
+                <area target="" alt="Himachal Pradesh" title="Himachal Pradesh" href="./states/Himachal.html"
+                    coords="189,90,206,78,242,94,245,118,225,119,221,134,203,110" shape="poly">
+                <area target="" alt="Jharkhand" title="Jharkhand" href="./states/Jharkhand.html"
+                    coords="326,279,347,283,361,285,373,283,361,263,389,248,387,231,367,247,352,240,332,247,313,248"
+                    shape="poly">
+                <area target="" alt="Karnataka" title="Karnataka" href="./states/Karnataka.html"
+                    coords="143,411,153,391,177,371,212,354,209,399,196,409,198,431,216,440,218,453,205,453,209,469,197,475,186,477,170,467,158,455,151,425"
+                    shape="poly">
+                <area target="" alt="Kerala" title="Kerala" href="./states/Kerala.html"
+                    coords="161,460,181,479,197,511,197,539,184,524,177,495" shape="poly">
+                <area target="" alt="Madhya Pradesh" title="Madhya Pradesh" href="./states/MP.html"
+                    coords="153,282,168,256,169,227,187,235,185,248,207,243,215,230,202,216,229,200,241,203,233,225,229,244,240,244,239,228,278,227,303,244,301,257,288,253,289,264,272,291,264,300,232,297,213,288,196,306,187,296,173,295"
+                    shape="poly">
+                <area target="" alt="Maharashtra" title="Maharashtra" href="./states/Maharashtra.html"
+                    coords="130,317,146,306,154,285,197,302,211,292,266,301,268,329,254,346,252,329,230,327,219,340,207,352,176,370,149,385,146,394,134,387"
+                    shape="poly">
+                <area target="" alt="Manipur" title="Manipur" href="./states/Manipur.html"
+                    coords="477,238,493,219,505,227,497,245" shape="poly">
+                <area target="" alt="Tamil Nadu" title="Tamil Nadu" href="./states/TamilNadu.html"
+                    coords="217,455,256,449,246,503,205,543,187,485" shape="poly">
+                <area target="" alt="Odisha" title="Odisha" href="./states/Odisha.html"
+                    coords="385,294,371,286,328,282,297,314,291,346,278,363,337,341,373,318" shape="poly">
+                <area target="" alt="Rajasthan" title="Rajasthan" href="./states/Rajasthan.html"
+                    coords="157,137,85,187,109,224,165,253,197,240,217,197,184,153" shape="poly">
+                <area target="" alt="Uttar Pradesh" title="Uttar Pradesh" href="./states/UP.html"
+                    coords="225,135,261,162,321,190,325,217,302,241,247,219,217,194" shape="poly">
+                <area target="" alt="Uttarakhand" title="Uttarakhand" href="./states/Uttarakhand.html"
+                    coords="223,132,261,157,276,138,246,112" shape="poly">
+                <area target="" alt="Punjab" title="Punjab" href="./states/Punjab.html"
+                    coords="188,93,168,129,197,143,210,123" shape="poly">
+            </map>
+
+        </section>
     </main>
+
+    <footer>
+
+        <p>Developed by Sahil Amberkar</p>
+    </footer>
 
 </body>
 
