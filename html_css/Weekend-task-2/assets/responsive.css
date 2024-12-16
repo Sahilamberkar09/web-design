@@ -1,0 +1,84 @@
+@media (max-width: 1000px) {
+  nav {
+    padding: 10px 15px;
+  }
+  nav ul {
+    display: none;
+  }
+
+  .thumbnail {
+    background-image: url("https://www.zoya.in/on/demandware.static/-/Sites-Zoya-Library/default/dwf027a397/images/home/Alive2_m.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 968px) {
+  .collections {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .col-imgs {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .product-imgs {
+    display: none;
+  }
+
+  .mysong {
+    margin-bottom: 2rem;
+  }
+
+  .upper-content p {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .bg-video-container video {
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  .product-spotted {
+    width: 95%;
+  }
+
+  .side-imgs,
+  .middle-img {
+    width: 100%;
+  }
+
+  .side-imgs img {
+    height: auto;
+    padding: 0;
+  }
+
+  .middle-img img {
+    aspect-ratio: 1 /1;
+    height: auto;
+    object-fit: cover;
+    object-position: 0% 22%;
+  }
+
+  .newspaper {
+    background-position: 50%;
+  }
+
+  .news-container {
+    width: 95%;
+  }
+
+  .news-container p {
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: start;
+  }
+  section {
+    margin: 0;
+  }
+}

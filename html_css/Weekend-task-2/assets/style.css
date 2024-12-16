@@ -1,0 +1,432 @@
+@import url(https://db.onlinewebfonts.com/c/cde8cf60fc5af2eae40d1222d8bbd58e?family=AGaramondPro-Regular);
+@import url("https://fonts.cdnfonts.com/css/nimbus-sans-l");
+
+:root {
+  --primary: #dcb191;
+  --hover-text: #fff;
+  --footer: #c49884;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal normal normal 1.188rem "AGaramondPro-Regular";
+  scrollbar-width: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+li a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--primary);
+  letter-spacing: 2px;
+  position: relative;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  border-radius: 5px;
+  background-color: var(--primary);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: var(--hover-text);
+}
+
+a img {
+  width: 100px;
+}
+
+.icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.icons i:hover {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--primary);
+}
+
+/* Thumbnail section */
+.thumbnail {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://www.zoya.in/on/demandware.static/-/Sites-Zoya-Library/default/dwc2866d68/images/home/Alive2_d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Collections Section */
+
+.collections {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5rem 2rem;
+  gap: 3rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  width: 20%;
+}
+
+.col-imgs {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+}
+
+.col-imgs .img {
+  width: 370px;
+  aspect-ratio: 1 /1;
+  transition: all 0.3s ease;
+}
+
+.col-imgs .img:hover {
+  transform: translateY(-6px);
+}
+
+.col-imgs .img:not(:hover) {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+.col-imgs .img1 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.756) 0%,
+      rgba(236, 237, 239, 0) 40%
+    ),
+    url("https://www.zoya.in/on/demandware.static/-/Sites-Zoya-Library/default/dwd8fd9eac/images/home/hollywood.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.col-imgs .img2 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.756) 0%,
+      rgba(236, 237, 239, 0) 40%
+    ),
+    url("https://www.zoya.in/on/demandware.static/-/Sites-Zoya-Library/default/dwc2f31b9b/images/home/HB3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.col-imgs .img3 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.756) 0%,
+      rgba(236, 237, 239, 0) 40%
+    ),
+    url("https://zoya.in/on/demandware.static/-/Sites-Zoya-Library/default/dw9734ea6e/images/home/ME_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.subtitle-text {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.subtitle-text h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.subtitle-text span {
+  font-size: 0.8rem;
+  color: var(--primary);
+}
+
+/* Discover By Categories */
+
+.categories {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.categories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.categories img {
+  width: 100px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 3px solid rgba(53, 47, 54, 0.441);
+}
+
+.categories img:hover {
+  border: 3px solid var(--primary);
+}
+
+.categories h2 {
+  text-align: center;
+}
+
+/* ============================================= */
+
+.section-title h1 {
+  font-size: 2rem;
+}
+
+.section-title h4 {
+  font-family: "Nimbus Sans L";
+  font-weight: 200;
+  letter-spacing: 4px;
+}
+
+.bg-video-container {
+  position: relative;
+}
+
+.bg-video {
+  position: relative;
+  z-index: -2;
+}
+
+.bg-video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.upper-content {
+  width: 100%;
+  position: absolute;
+}
+
+.upper-content h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.7rem;
+  margin: 3rem 0 0.4rem 0;
+}
+
+.upper-content p {
+  text-align: center;
+  color: var(--hover-text);
+  margin-bottom: 2rem;
+}
+
+.upper-content q {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--hover-text);
+  margin-bottom: 1rem;
+}
+
+.product-imgs {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.product-imgs img {
+  width: 350px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+.product-spotted {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side-imgs,
+.middle-img {
+  width: 33%;
+}
+
+.side-imgs img {
+  width: 100%;
+  height: 268px;
+  object-fit: cover;
+  padding: 0 10px;
+}
+
+.middle-img img {
+  width: 100%;
+  height: 550px;
+}
+
+.newspaper {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://www.zoya.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Zoya-Library/default/dwee298ac2/Brady_house_illustration_16x9.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0;
+}
+
+.news-container {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 5rem 0;
+  align-items: center;
+  color: var(--hover-text);
+  gap: 1rem;
+}
+
+.news-container .section-title {
+  margin-bottom: 0;
+}
+
+.news-container p {
+  font-size: 1rem;
+}
+
+.news-container input {
+  width: 100%;
+  padding: 10px;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+.news-container p a {
+  color: var(--primary);
+}
+
+button {
+  width: 60%;
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  color: var(--hover-text);
+  padding: 5px 15px;
+}
+
+/* =============================================== */
+
+footer {
+  padding: 2rem 2rem 1rem 2rem;
+  width: 100%;
+  background-color: var(--footer);
+}
+
+.footer-container .footer-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.footer-links {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  color: var(--hover-text);
+  flex-wrap: wrap;
+}
+
+.links h5 {
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  padding-bottom: 16px;
+  border-bottom: 3px solid rgba(255, 250, 228, 0.25);
+}
+
+.links ul {
+  list-style-type: none;
+}
+
+.links ul li {
+  margin-bottom: 15px;
+}
+
+.links ul li a {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--hover-text);
+}
+
+.links:last-child ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.developer {
+  text-align: center;
+  color: var(--hover-text);
+  border-top: 1px solid rgba(255, 255, 255, 0.89);
+  padding: 1rem 0 0 0;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        .main_container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5 {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            margin: 10px;
+        }
+
+        .box1 {
+            position: relative;
+            padding: 20px;
+        }
+
+        .box2 {
+            position: relative;
+            z-index: 1;
+            background-color: lightskyblue;
+            top: 0;
+            left: 0;
+            margin: auto;
+            padding: 10px;
+
+        }
+
+        .box3 {
+            background-color: beige;
+            position: relative;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            margin: auto;
+
+        }
+
+        /* 
+
+        .box4 {
+            position: absolute;
+        }
+
+        .box5 {
+            position: absolute;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="box1">
+            <div class="box2">
+                <div class="box3"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
