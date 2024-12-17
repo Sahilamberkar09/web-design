@@ -112,7 +112,7 @@ a img {
 
 .col-imgs .img {
   width: 370px;
-  aspect-ratio: 1 /1;
+  aspect-ratio: 3/4;
   transition: all 0.3s ease;
 }
 
@@ -195,8 +195,9 @@ a img {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 3rem;
 }
 
 .categories img {
@@ -215,10 +216,19 @@ a img {
   text-align: center;
 }
 
+.rows {
+  display: flex;
+  gap: 3rem;
+}
+
 /* ============================================= */
 
 .section-title h1 {
   font-size: 2rem;
+}
+
+.content {
+  position: relative;
 }
 
 .section-title h4 {
@@ -251,6 +261,7 @@ a img {
 .upper-content {
   width: 100%;
   position: absolute;
+  top: 0;
 }
 
 .upper-content h1 {
