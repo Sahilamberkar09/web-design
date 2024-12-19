@@ -2,11 +2,12 @@
 
 var num1 = parseFloat(prompt("Enter number 1"));
 var num2 = parseFloat(prompt("Enter number 2"));
+var num3 = parseFloat(prompt("Enter number 3"));
 
-if (num1 == num2) {
-  document.write("Number 1 is Equal to Number 2");
-} else if (num1 > num2) {
-  document.write("Number 1 is greater");
+if (num1 >= num2 && num1 >= num3) {
+  document.write(`${num1} is greater`);
+} else if (num2 >= num1 && num2 >= num3) {
+  document.write(`${num2} is greater`);
 } else {
-  document.write("Number 2 is Greater");
+  document.write(`${num3} is greater`);
 }
