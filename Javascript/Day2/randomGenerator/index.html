@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Meme Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 100%;
+            margin: 3rem auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 10px;
+            margin: 2rem;
+            background-color: aquamarine;
+            outline: none;
+            border: none;
+            box-shadow: 4px 4px 0 0 black;
+        }
+
+        .image-container img {
+            width: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <button id="btn">Click Here to Generate Random Memes</button>
+            <div class="image-container">
+                <img id="imgs">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        let img = document.getElementById("imgs");
+        let btn = document.getElementById("btn");
+        let roundednumber;
+
+
+        random = () => {
+            var a = Math.random();
+            a = a * 10 + 1;
+            roundednumber = Math.floor(a);
+            console.log(roundednumber);
+            return roundednumber;
+        }
+
+        btn.addEventListener("click", function () {
+            random();
+            switch (roundednumber) {
+                case 1:
+                    img.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGJ2T-cde5Q9kdv208pYrjBPz89gX2rjzPzw&s");
+                    break;
+                case 2:
+                    img.setAttribute("src", "https://www.trendingus.com/wp-content/uploads/2022/01/Ek-Cup-Chai-Meme.jpg");
+                    break;
+                case 3:
+                    img.setAttribute("src", "https://www.trendingus.com/wp-content/uploads/2022/01/Heropanti-meme.jpg");
+                    break;
+                case 4:
+                    img.setAttribute("src", "https://i.pinimg.com/474x/50/64/49/5064492605139e6b047188476c4d6504.jpg");
+                    break;
+                case 5:
+                    img.setAttribute("src", "https://i.pinimg.com/736x/e9/61/a8/e961a8f1dfcce80e989fe783e96b303c.jpg");
+                    break;
+                case 6:
+                    img.setAttribute("src", "https://wp.popxo.com/wp-content/uploads/2021/09/Shehnaaz.jpg");
+                    break;
+                case 7:
+                    img.setAttribute("src", "https://www.trendingus.com/wp-content/uploads/2022/01/Phir-Hera-Pheri.jpg");
+                    break;
+                case 8:
+                    img.setAttribute("src", "https://images.news18.com/ibnlive/uploads/2022/07/india-us-memes.png");
+                    break;
+                case 9:
+                    img.setAttribute("src", "https://pbs.twimg.com/media/E5S75FSVcAImrVR.jpg");
+                    break;
+                case 10:
+                    img.setAttribute("src", "https://i.pinimg.com/736x/39/05/0a/39050a8da44c04956e7895498218ab3c.jpg");
+                    break;
+            }
+        })
+    </script>
+
+</body>
+
+</html>
