@@ -64,9 +64,7 @@
 
 
         random = () => {
-            var a = Math.random();
-            a = a * 10 + 1;
-            roundednumber = Math.floor(a);
+            roundednumber = Math.floor(Math.random() * 10) + 1;
             return roundednumber;
         }
 
