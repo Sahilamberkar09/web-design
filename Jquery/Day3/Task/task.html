@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        button {
+            padding: 0.5rem 1rem;
+            margin: 1rem;
+            outline: none;
+            border: none;
+            border-radius: 25px;
+        }
+
+        button#btn1 {
+            background-color: green;
+            color: white;
+        }
+
+        button#btn2 {
+            background-color: red;
+            color: white;
+        }
+
+
+        .animate-box {
+            background: coral;
+            height: 100px;
+            width: 200px;
+            position: absolute;
+            border: 2px solid black;
+            overflow: hidden;
+            text-align: center;
+            line-height: 100px;
+            margin: 1rem;
+        }
+
+        .hello-message {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            transition: left 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="btn1">Start Animation</button>
+        <button id="btn2">Stop Animation</button>
+        <div class="animate-box">
+            <div class="hello-message">Hello</div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="task.js"></script>
+</body>
+
+</html>
