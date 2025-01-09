@@ -4,11 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Read More / Read Less</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+
+        }
+
+        .readMoreText {
+            display: none;
+        }
+
+        p {
+            background-color: burlywood;
+            padding: 15px;
+            width: 300px;
+            border-radius: 15px;
+
+
+        }
+
+        .toggleBtn {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: all .7s ease-in;
+        }
+    </style>
 </head>
 
 <body>
 
+    <div class="container">
+        <p>
+            Hi there, My name is Sahil Amberkar.
+            <span class="readMoreText">
+                I am a web developer and I recently started learning Jquery.
+                I have recently completed my B.Sc in Information Technology at GJC College, Ratnagiri with a CGPA of
+                7.65.
+            </span>
+
+        </p>
+        <button class="toggleBtn" href="#">Read more</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $('.toggleBtn').click(function () {
+            $('.readMoreText').toggle(700);
+            if ($('.toggleBtn').text()
+                == "Read more") {
+                $(this).text("Read less")
+                $(this).css("background-color", "red");
+            } else {
+                $(this).text("Read more")
+                $(this).css("background-color", "#4CAF50");
+            }
+        });
+    </script>
 </body>
 
 </html>

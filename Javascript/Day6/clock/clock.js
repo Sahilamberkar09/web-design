@@ -1,41 +1,60 @@
-function updateClock() {
-  const now = new Date();
+function clock() {
+  let d = new Date();
+  let h = d.getHours();
+  let m = d.getMinutes();
+  let s = d.getSeconds();
+  let session = "AM";
 
-  // Update date
-  const dateOptions = {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  };
-  document.getElementById("date").textContent = now.toLocaleDateString(
-    "en-US",
-    dateOptions
-  );
+  if (h == 0) {
+    h = 12;
+  }
+  if (h > 12) {
+    h = h - 12;
+    session = "PM";
+  }
 
-  // Update time
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let seconds = now.getSeconds();
+  h = h < 10 ? "0" + h : h;
+  m = m < 10 ? "0" + m : m;
+  s = s < 10 ? "0" + s : s;
 
-  // Add leading zeros
-  hours = hours.toString().padStart(2, "0");
-  minutes = minutes.toString().padStart(2, "0");
-  seconds = seconds.toString().padStart(2, "0");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let day = days[d.getDay()];
+  let date = d.getDate();
+  let month = months[d.getMonth()];
+  let year = d.getFullYear();
 
-  // Determine AM/PM
-  const period = hours >= 12 ? "pm" : "am";
+  date = date < 10 ? "0" + date : date;
 
-  // Convert to 12-hour format
-  hours = hours % 12;
-  hours = hours ? hours : 12; // Convert 0 to 12
-
-  // Display time
+  document.getElementById("hours").innerHTML = h;
+  document.getElementById("mins").innerHTML = m;
+  document.getElementById("sec").innerHTML = s;
+  document.getElementById("ampm").innerHTML = session;
   document.getElementById(
-    "time"
-  ).textContent = `${hours} : ${minutes} : ${seconds} ${period}`;
+    "date"
+  ).innerHTML = `<span class="day-style">${day}</span>, ${date} ${month} , ${year}`;
 }
 
-// Update clock immediately and then every second
-updateClock();
-setInterval(updateClock, 1000);
+setInterval(clock, 1000);
+clock();
