@@ -17,6 +17,10 @@ const person = {
 //   console.log(value);
 // });
 
+// Object.entries(person).forEach(function ([per, value]) {
+//   console.log(per, value);
+// });
+
 const one = [1, 2, 3];
 const two = [4, 5, 6];
 const three = [7, 8, 9];

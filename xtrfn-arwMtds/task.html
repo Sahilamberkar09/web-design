@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 2rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            background-color: #ebe9e9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="btns">
+            <button id="set">Set Image</button>
+            <button id="remove">Remove Image</button>
+        </div>
+        <img id="img" style="width: 500px; height: 500px; display: none;">
+    </div>
+
+
+    <script>
+        let btn1 = document.getElementById("set");
+        let btn2 = document.getElementById("remove");
+        let img = document.getElementById("img")
+
+        btn1.addEventListener("click", function () {
+            img.setAttribute("src", "https://cdn.pixabay.com/photo/2024/11/05/05/38/japancontest-9175030_1280.jpg")
+            img.setAttribute("alt", "City Image")
+            img.style.display = "block"
+        });
+
+        btn2.addEventListener("click", function () {
+            img.removeAttribute("src");
+            img.removeAttribute("alt");
+            img.style.display = "none"
+        })
+    </script>
+
+</body>
+
+</html>
